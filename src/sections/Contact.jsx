@@ -89,7 +89,6 @@ export default function Contact(){
         transition={{duration:2 , repeat: Infinity , ease: "easeInOut"}}
         />
         </motion.div>
-        <div>
           {/* Right Side  */}
           <motion.div className="w-full md:w-1/2 bg-white/5 p-8 rounded-2xl shadow-lg border border-white/10"
           initial={{opacity: 0 , x:50}}
@@ -183,7 +182,7 @@ export default function Contact(){
           </motion.div>
         </div>
 
-      </div>
+     
     </section>
   )
 }
