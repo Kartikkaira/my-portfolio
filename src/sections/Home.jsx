@@ -1,14 +1,14 @@
 import React, { useMemo } from "react";
 import ParticlesBackground from "../components/ParticlesBackground";
 import { motion } from "framer-motion";
-import { FaXTwitter,FaLinkedin,FaGithub } from "react-icons/fa6";
-import Avator from "../assets/Avator.png";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa6";
+import Avator from "../assets/Avator.webp";
 
 
 const socials =[
-  {Icon : FaXTwitter , label: "X",href : "#"},
   {Icon : FaLinkedin , label: "Linkedin",href : "https://www.linkedin.com/in/kartik-kaira-6531a5285/"},
   {Icon : FaGithub , label: "GitHub",href : "https://github.com/Kartikkaira"},
+  {Icon : FaEnvelope , label: "Email",href : "mailto:kairakartik30082005@gmail.com"},
 ]
 
 const glowVariants = {
@@ -123,8 +123,10 @@ React.useEffect(() =>{
           bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63]
           shadow-lg hover:scale-105 transition-all"
           >View My Work</a>
-          <a href="/Kartik_Kaira_Resume.pdf"
-          download
+          <a href="/Kartik_Resume.pdf"
+          download="Kartik_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-6 py-3 rounded-full font-medium text-lg text-black bg-white
           hover:bg-gray-200 shadow-lg hover:scale-105 transition-all"
           >My Resume</a>
@@ -166,17 +168,19 @@ React.useEffect(() =>{
 
       />
 
-        <motion.img src={Avator} alt="Kartik Kaira"
-        className="absolute top-1/2 -translate-y-1/2 object-contain select-none pointer-events-none:"
+        <motion.img
+        src={Avator}
+        alt="Kartik Kaira"
+        width={1024}
+        height={1536}
+        fetchPriority="high"
+        className="absolute top-1/2 -translate-y-1/2 object-contain select-none pointer-events-none"
         style={{
           right:"-30px" , width : "min(45vw,780px)" , maxHeight: "90vh"
         }}
-
         initial={{opacity:0 , y:40 , scale:0.98}}
         animate={{opacity:1 , y:0 , scale:1}}
         transition={{delay:0.2 , duration:0.8}}
-
-
         />
       </div>
 

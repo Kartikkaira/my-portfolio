@@ -1,10 +1,10 @@
-import { FaXTwitter , FaLinkedin , FaGithub } from "react-icons/fa6";
+import { FaLinkedin , FaGithub , FaEnvelope } from "react-icons/fa6";
 import {motion} from "framer-motion";
 
 const socials =[
-  {Icon : FaXTwitter , label: "X",href : "#"},
   {Icon : FaLinkedin , label: "Linkedin",href : "https://www.linkedin.com/in/kartik-kaira-6531a5285/"},
   {Icon : FaGithub , label: "GitHub",href : "https://github.com/Kartikkaira"},
+  {Icon : FaEnvelope , label: "Email",href : "mailto:kairakartik30082005@gmail.com"},
 ]
 
 const glowVariants = {

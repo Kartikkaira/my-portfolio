@@ -36,7 +36,10 @@ export default function About(){
       transition={{type:"spring" , stiffness:200 , damping:18}}
       >
          <img src={photo}
-          alt="profile" 
+          alt="profile"
+          width={200}
+          height={200}
+          loading="lazy"
           className="absolute inset-0 w-full h-full object-cover" />
         </motion.div>
         <div className="flex-1 flex flex-col justify-center text-center md:text-left">

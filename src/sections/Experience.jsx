@@ -8,6 +8,18 @@ const experiences = [
     duration: "Apr/2026 - July/2026",
     description: "Built and maintained scalable full-stack applications using modern web technologies, delivering high-performance solutions and seamless user experiences.",
   },
+  {
+    role: "AI Operation & Growth",
+    company: "Kafalmart",
+    duration: "Aug/2026 - Sep 2026",
+    description: "Built a full-stack hyperlocal delivery platform for 20+ vendors with 10+ reusable React components and core features including search, cart, and order management.",
+  },
+  {
+    role: "Full Stack Developer",
+    company: "Zelvoxx",
+    duration: "Sep 2026 - Present",
+    description: "Redesigned company website frontend using React and Tailwind CSS, delivering a responsive, interactive UI with smooth animations, optimized load times, and SEO compliance.",
+  }
 ];
 
 function ExperienceItem({exp , idx , start , end , scrollYProgress , layout}){
@@ -29,7 +41,7 @@ function ExperienceItem({exp , idx , start , end , scrollYProgress , layout}){
         >
         </motion.div>
         <motion.article className={`absolute ${idx%2 === 0 ? "bottom-12" : "top-12"}
-        bg-gray-900/80 backdrop-blur border border-gray-700/70 rounded-xl p-7 w-[320px] shadow-lg`}
+        bg-gray-900/80 backdrop-blur border border-gray-700/70 rounded-xl p-5 lg:p-7 w-[280px] lg:w-[320px] shadow-lg`}
         style={{opacity , y , maxWidth : "90vw"}}
         transition={{duration : 0.4 , delay : idx*0.15}}
         >
@@ -117,7 +129,7 @@ export default function Experience(){
                 <div className="relative flex justify-between mt-0">
                   {experiences.map((exp,idx) =>(
                     <ExperienceItem
-                    key={idx}
+                    key={`${exp.company}-${idx}`}
                     exp={exp}
                     idx={idx}
                     start={idx === 0 ? 0 : thresholds[idx-1]}
@@ -143,7 +155,7 @@ export default function Experience(){
                 <div className="relative flex flex-col gap-10 ml-10 mt-6 pb-28">
                   {experiences.map((exp , idx) =>(
                     <ExperienceItem
-                    key={idx}
+                    key={`${exp.company}-${idx}`}
                     exp={exp}
                     idx={idx}
                     start={idx === 0 ? 0 : thresholds[idx-1]}

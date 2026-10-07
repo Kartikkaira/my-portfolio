@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ParticlesBackground from "../components/ParticlesBackground";
 import emailjs from "@emailjs/browser";
-import Astra from "../assets/Astra.png";
+import Astra from "../assets/Astra.webp";
 import { motion } from "framer-motion";
 
 
@@ -84,6 +84,7 @@ export default function Contact(){
         <motion.img
         src={Astra}
         alt="Contact" 
+        loading="lazy"
         className="w-72 md:w-140 rounded-2xl shadow-lg object-cover"
         animate={{y:[0,-10,0]}}
         transition={{duration:2 , repeat: Infinity , ease: "easeInOut"}}

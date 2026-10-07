@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import mobile1 from "../assets/mobile1.jpeg";
-import laptop1 from "../assets/laptop1.png";
+import laptop1 from "../assets/laptop1.webp";
 import mobile2 from "../assets/mobile2.jpeg";
-import laptop2 from "../assets/laptop2.png";
+import laptop2 from "../assets/laptop2.webp";
+import mobile3 from "../assets/mobile3.jpeg";
+import laptop3 from "../assets/laptop3.webp";
 
 const useMobile = (query = "(max-width : 630px)") =>{
   const [isMobile , setMobile] = useState(
@@ -32,10 +34,10 @@ export default function Projects(){
 const projects = useMemo(
     () => [
       {
-        title: "Tracky",
-        link: "https://seo-rank-tracker-kohl.vercel.app/",
-        bgColor: "#0B1120",
-        image: isMobile ? mobile1 : laptop1, // use mobile or desktop image
+        title: "Career Craft",
+        link: "https://ai-career-saas-zeta.vercel.app/",
+        bgColor: "#dc9317",
+        image: isMobile ? mobile3 : laptop3,
       },
       {
         title: "Kafal Mart",
@@ -43,12 +45,13 @@ const projects = useMemo(
         bgColor: "#0B1120",
         image: isMobile ? mobile2 : laptop2,
       },
-      // {
-      //   title: "Hungry Tiger",
-      //   link: "https://www.eathungrytiger.com/",
-      //   bgColor: "#dc9317",
-      //   image: isMobile ? photo3 : img3,
-      // },
+      
+      {
+        title: "Tracky",
+        link: "https://seo-rank-tracker-kohl.vercel.app/",
+        bgColor: "#0B1120",
+        image: isMobile ? mobile1 : laptop1, // use mobile or desktop image
+      },
     ],
     [isMobile] // re-run only when `isMobile` changes
   );
@@ -166,7 +169,7 @@ const projects = useMemo(
         <a href={activeProject?.link}
         target="_blank"
         rel="noopener noreferrer"
-        className=" inline-block px-6 py-3 font-semibold roundded-lg bg-white text-black hover:bg-gray-200 transition-all"
+        className="inline-block px-6 py-3 font-semibold rounded-lg bg-white text-black hover:bg-gray-200 transition-all shadow-md"
         aria-label={`View ${activeProject?.title}`}
         >View Project</a>
       </div>
